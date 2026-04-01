@@ -1,0 +1,5 @@
+# MCP Tools to monitor
+# Add one GitHub repo URL per line
+# Example:
+# https://github.com/modelcontextprotocol/servers
+# https://github.com/anthropics/anthropic-tools

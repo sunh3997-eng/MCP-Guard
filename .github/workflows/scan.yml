@@ -1,0 +1,34 @@
+name: MCP Tool Scan
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Scanner
+        env:
+          MCP_GUARD_API_URL: ${{ secrets.MCP_GUARD_API_URL }}
+        run: |
+          python scanner/scan.py \
+            --api-url "${MCP_GUARD_API_URL:-http://localhost:8000}" \
+            --repos scanner/repos.txt
+        continue-on-error: true
+
+      - name: Upload scan results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-results-${{ github.run_number }}
+          path: scanner/
+          retention-days: 30

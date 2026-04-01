@@ -1,0 +1,47 @@
+[
+  {
+    "tool_id": "mcp-filesystem",
+    "name": "MCP Filesystem",
+    "description": "File system access for MCP agents",
+    "repo_url": "https://github.com/example/mcp-filesystem",
+    "author": "example-org",
+    "manifest_path": "manifest.json",
+    "code_files": ["src/index.js", "src/handlers.js"]
+  },
+  {
+    "tool_id": "mcp-web-search",
+    "name": "MCP Web Search",
+    "description": "Web search integration for MCP agents using multiple providers",
+    "repo_url": "https://github.com/example/mcp-web-search",
+    "author": "example-org",
+    "manifest_path": "manifest.json",
+    "code_files": ["src/index.js", "src/search.js", "src/providers.js"]
+  },
+  {
+    "tool_id": "mcp-database-connector",
+    "name": "MCP Database Connector",
+    "description": "SQL and NoSQL database access for MCP agents",
+    "repo_url": "https://github.com/example/mcp-database-connector",
+    "author": "example-org",
+    "manifest_path": "manifest.json",
+    "code_files": ["src/index.js", "src/query.js", "src/connection.js"]
+  },
+  {
+    "tool_id": "mcp-github-tools",
+    "name": "MCP GitHub Tools",
+    "description": "GitHub API integration for MCP agents",
+    "repo_url": "https://github.com/example/mcp-github-tools",
+    "author": "example-org",
+    "manifest_path": "manifest.json",
+    "code_files": ["src/index.js", "src/repos.js", "src/issues.js"]
+  },
+  {
+    "tool_id": "mcp-email-sender",
+    "name": "MCP Email Sender",
+    "description": "Email composition and delivery for MCP agents via SMTP",
+    "repo_url": "https://github.com/example/mcp-email-sender",
+    "author": "example-org",
+    "manifest_path": "manifest.json",
+    "code_files": ["src/index.js", "src/smtp.js", "src/templates.js"]
+  }
+]
